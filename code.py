@@ -62,7 +62,6 @@ def count_protein(protein):
     seq = seq.replace("___", "_")
     lsp = seq.split("_")
     final=[]
-    print("smaller elements",len(lsp))
     for i in lsp:
         if (len(i)>44):
             final.append(i)
