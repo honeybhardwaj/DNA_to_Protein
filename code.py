@@ -27,8 +27,8 @@ def translate(seq):
         'GGA':'G', 'GGC':'G', 'GGG':'G', 'GGT':'G',
         'TCA':'S', 'TCC':'S', 'TCG':'S', 'TCT':'S',
         'TTC':'F', 'TTT':'F', 'TTA':'L', 'TTG':'L',
-        'TAC':'Y', 'TAT':'Y', 'TAA':'*', 'TAG':'*',
-        'TGC':'C', 'TGT':'C', 'TGA':'*', 'TGG':'W',
+        'TAC':'Y', 'TAT':'Y', 'TAA':'_', 'TAG':'_',
+        'TGC':'C', 'TGT':'C', 'TGA':'_', 'TGG':'W',
     }
     protein =""
     val=len(seq)
@@ -36,12 +36,13 @@ def translate(seq):
     	val=len(seq)-(len(seq)%3)
     
     try:
-    	for i in range(0, val, 3):
-    		codon = seq[i:i + 3]
-    		protein+= table[codon]
+        for i in range(0, val, 3):
+            codon = seq[i:i + 3]
+            protein+= table[codon]
     except:
     	print("input file does not contain DNA sequence data")
     	sys.exit(0);
+
     return protein
 
 # this function is used to read and clean the dna sequence
@@ -56,12 +57,17 @@ def read_seq(inputfile):
 
 # this function is for counting the protein found
 def count_protein(protein):
-	count=1;
-	if (len(protein)>44):
-		count=count+(len(protein)-44)
-	else:
-		count=0;
-	return count
+    seq = protein
+    seq = seq = seq.replace("__", "_")
+    seq = seq.replace("___", "_")
+    lsp = seq.split("_")
+    final=[]
+    print("smaller elements",len(lsp))
+    for i in lsp:
+        if (len(i)>44):
+            final.append(i)
+    count=len(final)
+    return count
 
 
 
@@ -69,29 +75,30 @@ def count_protein(protein):
 
 inputfile =input("Enter the name of file:")
 if(checkfasta(inputfile)):
-	sequence = read_seq(inputfile)[150:]
-	print("total protien found with min length 44")
-	protein = translate(sequence)
-	numberp = count_protein(protein)
-	print("The number of protein found are",numberp)
-	print()
-	print("number of protien found under sequence length 44-100")
-	protein = translate(sequence[43:100])
-	numberp = count_protein(protein)
-	print("The number of protein found are",numberp)
-	print()
-	print("number of protien found under sequence length 100-500")
-	protein = translate(sequence[99:500])
-	numberp = count_protein(protein)
-	print("The number of protein found are",numberp)
-	print()
-	print("number of protien found under sequence length 500-beyond")
-	protein = translate(sequence[499:])
-	numberp = count_protein(protein)
-	print("The number of protein found are",numberp)
-
-
-
+    sequence = read_seq(inputfile)[150:]
+    print("total protien found with min length 44")
+    protein = translate(sequence)
+    numberp = count_protein(protein)
+    print("The number of protein found are",numberp)
+    print()
+    print("number of protien found under sequence length 44-100")
+    protein = translate(sequence[43:100])
+    numberp = count_protein(protein)
+    print("The number of protein found are",numberp)
+    print()
+    print("number of protien found under sequence length 100-500")
+    protein = translate(sequence[99:500])
+    numberp = count_protein(protein)
+    print("The number of protein found are",numberp)
+    print()
+    print("number of protien found under sequence length 500-beyond")
+    protein = translate(sequence[499:])
+    numberp = count_protein(protein)
+    print("The number of protein found are",numberp)
+    print("\n\n")
+    protein = translate(sequence[0:44])
+    numberp = count_protein(protein)
+    print("The number of protein found are",numberp)
 else:
 	print("input file is not in .fasta format")
 	sys.exit(0);
