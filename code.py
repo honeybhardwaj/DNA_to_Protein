@@ -94,10 +94,6 @@ if(checkfasta(inputfile)):
     protein = translate(sequence[499:])
     numberp = count_protein(protein)
     print("The number of protein found are",numberp)
-    print("\n\n")
-    protein = translate(sequence[0:44])
-    numberp = count_protein(protein)
-    print("The number of protein found are",numberp)
 else:
 	print("input file is not in .fasta format")
 	sys.exit(0);
