@@ -25,7 +25,8 @@ Your submission should contain your code along with following information in .tx
 
 ## Poject output
 
-![Screenshot from 2021-04-01 10-12-45](https://user-images.githubusercontent.com/51120790/113244980-ad689880-92d3-11eb-93ec-b7e04877b49a.png)
+![Screenshot from 2021-04-01 18-39-47](https://user-images.githubusercontent.com/51120790/113298965-00653e80-931a-11eb-8966-6b522a11571c.png)
+
 
 
 <h1 align=center> Project Admin ❤️ </h1>
