@@ -27,7 +27,6 @@ Your submission should contain your code along with following information in .tx
 
 ![Screenshot from 2021-04-01 18-39-47](https://user-images.githubusercontent.com/51120790/113298965-00653e80-931a-11eb-8966-6b522a11571c.png)
 
-<hr>
 
 <h1 align=center> Project Admin ❤️ </h1>
 <p align="center">
