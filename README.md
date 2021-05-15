@@ -30,7 +30,7 @@ Your submission should contain your code along with following information in .tx
 
 <h1 align=center> Project Admin ❤️ </h1>
 <p align="center">
-  <a href="https://github.com/honeybhardwaj"><img src="https://user-images.githubusercontent.com/51120790/112728813-11dfcc80-8f4f-11eb-8398-5864bd390546.png" width=150px height=150px /></a> 
+  <a href="https://github.com/honeybhardwaj"><img src="https://user-images.githubusercontent.com/51120790/118375027-acb66800-b5dc-11eb-8485-2f55b13a0147.png" width=150px height=150px /></a> 
     
 <p align="center">
   <img src="https://img.shields.io/badge/honeybhardwaj%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>  <img src="https://img.shields.io/badge/honeybhardwaj%20-%231DA1F2.svg?&style=for-the-badge&logo=github&logoColor=black"/> <img src="https://img.shields.io/badge/honney_bhardwaj%20-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white"/>                                                                                      
